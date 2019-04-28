@@ -3,7 +3,6 @@ def search_value_of(name) -> int:
         return int(name)
     except ValueError:
         pass
-
     if name not in results:
         helper = items[name]
         if len(helper) == 1:
