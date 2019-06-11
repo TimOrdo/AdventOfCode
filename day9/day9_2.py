@@ -4,6 +4,7 @@ import itertools
 input_list = list()
 cities = set()
 answeres = list()
+
 with open("input.txt") as file:
     for line in file.read().splitlines():
         cities.add(re.findall(r"[A-Z]\w+|[0-9]\w+", line)[0])
@@ -19,4 +20,4 @@ for item in cities_map:
                 helper += int(list_item[2])
     answeres.append(helper)
 
-print(min(answeres))
+print(max(answeres))
